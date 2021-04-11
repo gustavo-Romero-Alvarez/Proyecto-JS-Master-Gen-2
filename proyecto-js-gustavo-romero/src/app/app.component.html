@@ -1,0 +1,46 @@
+
+<mat-tab-group>
+  
+    <mat-tab label="Comida"> 
+      <div>
+      <div class="container">
+      
+        <div class="izquierda">
+          <app-lista-productos titulo="Comida" [productos]="arrComida" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+        
+        </div>
+        <div class="derecha">
+          <app-pedido [arrProductos]="productosSeleccionados"></app-pedido>
+    
+        </div>
+      </div>
+    </div>
+    
+    
+  </mat-tab>
+  <mat-tab label="Bebida y jugos">
+    <div>
+      <div class="container">
+      <div class="izquierda">
+        
+        <app-lista-productos titulo="Bebidas y jugos" [productos]="arrBebida" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+      </div>
+      <div class="derecha">
+        <app-pedido [arrProductos]="productosSeleccionados"></app-pedido> 
+    </div>
+      </div>
+   </div>  
+  </mat-tab>
+  <mat-tab label="Carrito">  
+    <div class="container">
+    <app-pedido [arrProductos]="productosSeleccionados"></app-pedido>
+  </div>
+  </mat-tab>
+  <mat-tab label="Datos">  
+    <div class="container">
+    <app-datos [arrProductos2]="productosSeleccionados"></app-datos>
+  </div>
+  </mat-tab>
+  
+</mat-tab-group>
+

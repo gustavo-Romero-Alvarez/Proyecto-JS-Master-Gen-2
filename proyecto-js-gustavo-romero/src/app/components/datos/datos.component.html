@@ -1,0 +1,31 @@
+<h1>Datos de  Carrito</h1>
+<div class="separa"><button class="btn btn-primary separa" (click)="map1()"> Lista de iD</button>
+    <select name="" id="">
+        <option *ngFor="let lista of comboBox">
+            {{lista}}
+        </option>
+    </select>
+</div>
+
+<div class="separa">
+    <button class="separa" (click)="map2()"> Lista de Nombre</button>
+    <select name="" id="">
+        <option *ngFor="let lista of comboBoxName">
+            {{lista}}
+        </option>
+    </select>
+</div>
+
+<div class="separa">
+    <button class="separa" (click)="map3()"> Lista de Body</button>
+    <select name="" id="">
+        <option *ngFor="let lista of comboBoxBody">
+            {{lista}}
+        </option>
+    </select>
+</div>
+
+<div>
+    <input type="text" placeholder="Buscarid" name="filterPost" [(ngModel)]='filterPost'>
+    <button class="btn btn-primary separa" (click)="find1()"> Buscar id</button>
+</div>

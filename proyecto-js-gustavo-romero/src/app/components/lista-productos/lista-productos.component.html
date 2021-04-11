@@ -1,0 +1,14 @@
+<h3>{{titulo}}</h3>
+<div>
+    <div>
+        <input type="text" name="filterPost" placeholder="Buscar por Titulo , Precio..." [(ngModel)]="filterPost"> 
+    </div>
+</div>
+<div class="productos">
+    <div class="producto" *ngFor ="let producto of productos | filter:filterPost" (click)="onClick(producto)" >
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc_y31crRde3mG6sdaqZS81n05Y_XKjlAnsQ&usqp=CAU"> 
+         <p>{{producto.title}}</p>
+         <p>{{producto.id}}</p>
+    </div>
+
+</div>
